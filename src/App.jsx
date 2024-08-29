@@ -1,11 +1,13 @@
-import { useState } from 'react'
-
 import './App.css'
 
 function App() {
+  const name = "Artemis Levitt";
+  const currentYear = new Date().getFullYear();
   return (
     <>
-      <h1>Vite + React</h1>
+      <h1>Site</h1>
+      <p>Created by {name}</p>
+      <p>Copyright {currentYear}</p>
     </>
   )
 }
