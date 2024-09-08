@@ -11,24 +11,27 @@ function App() {
 
   let timeColor = "black";
   let timeOfDay = "";
+  const customStyle = {
+      color: ""
+  }
 
     if (currentTime >= 0 && currentTime < 6 ) {
-        timeColor = "violet";
+        timeColor = customStyle.color = "violet";
         timeOfDay = "Night";
     } else if (currentTime >= 6 && currentTime < 12) {
-        timeColor = "yellow";
+        timeColor = customStyle.color = "yellow";
         timeOfDay = "Morning";
     } else if (currentTime >= 12 && currentTime < 18) {
-        timeColor = "green";
+        timeColor = customStyle.color = "green";
         timeOfDay = "Afternoon";
     } else if (currentTime >= 18 && currentTime < 24) {
-        timeColor = "blue";
+        timeColor = customStyle.color = "blue";
         timeOfDay = "Evening";
     }
 
   return (
     <>
-      <h1 className="heading" style={{color: timeColor}}>Good {timeOfDay}!</h1>
+      <h1 className="heading" style={customStyle}>Good {timeOfDay}!</h1>
       <p>Created by {name}</p>
       <p>Copyright {currentYear}</p>
     </>
