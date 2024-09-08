@@ -1,19 +1,13 @@
-import './App.css'
+import './Heading.css'
 
-function App() {
-  const name = "Artemis Levitt";
+function Heading() {
+    const currentTime = new Date().getHours();
 
-  //const date = new Date(2024, 9, 8, 23);
-
-  const date = new Date();
-  const currentYear = date.getFullYear();
-  const currentTime = date.getHours();
-
-  let timeColor = "black";
-  let timeOfDay = "";
-  const customStyle = {
-      color: ""
-  }
+    let timeColor = "black";
+    let timeOfDay = "";
+    const customStyle = {
+        color: ""
+    }
 
     if (currentTime >= 0 && currentTime < 6 ) {
         timeColor = customStyle.color = "violet";
@@ -29,13 +23,11 @@ function App() {
         timeOfDay = "Evening";
     }
 
-  return (
-    <>
-      <h1 className="heading" style={customStyle}>Good {timeOfDay}!</h1>
-      <p>Created by {name}</p>
-      <p>Copyright {currentYear}</p>
-    </>
-  )
+    return (
+        <>
+            <h1 className="heading" style={customStyle}>Good {timeOfDay}!</h1>
+        </>
+    )
 }
 
-export default App
+export default Heading
