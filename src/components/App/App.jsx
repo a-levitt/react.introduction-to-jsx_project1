@@ -1,10 +1,13 @@
 import './App.css'
 
+import List from '../List/List.jsx'
+
 function App() {
 
   return (
     <>
-        <p>Paragraph</p>
+        <p>Frontend frameworks</p>
+        <List />
     </>
   )
 }
